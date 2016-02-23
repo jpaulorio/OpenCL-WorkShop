@@ -18,3 +18,7 @@ To build programs do:
 On OSX:
 
 gcc program.c -o bin/program -framework OpenCL
+
+Try building the following project to check your setup:
+
+https://github.com/jpaulorio/password_crack
