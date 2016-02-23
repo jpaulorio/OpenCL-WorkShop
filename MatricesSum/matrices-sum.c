@@ -61,7 +61,8 @@ int main(int argc, char* argv[]) {
   }
 
   source_str = (char *)malloc(MAX_SOURCE_SIZE); source_size = fread(source_str, 1, MAX_SOURCE_SIZE, fp); fclose(fp);
-  cl_program program = clCreateProgramWithSource(context, 1, (const char**)&source_str, (const size_t *)&source_size, &status);
+  cl_program program = clCreateProgramWithSource(context, 1, (const char**)&source_str, 
+    (const size_t *)&source_size, &status);
   status = clBuildProgram(program, numDevices, devices, NULL, NULL, NULL);
 
   if (status != CL_SUCCESS)
